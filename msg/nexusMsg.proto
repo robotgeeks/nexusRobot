@@ -1,0 +1,30 @@
+// A very simple protocol definition, consisting of only
+// one message.
+
+
+enum MessageType 
+{
+  TWIST = 1;
+  POSITION = 2;
+  ODOM  = 3;
+}
+
+message Header 
+{
+  
+}
+
+message Twist 
+{ 
+    optional Header header = 1;
+    required float velX    = 2;
+    required float velY    = 3;
+    required float rotZ    = 4;
+}
+
+message NexusMsg 
+{
+  required Header header  = 1;
+  optional Twist  cmdVel  = 2;
+  optional Twist  actVel  = 3;
+}

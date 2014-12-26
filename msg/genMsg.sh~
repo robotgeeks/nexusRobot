@@ -1,0 +1,1 @@
+protoc --plugin=protoc-gen-nanopb=/home/alexey/workspace/nanopb/generator/protoc-gen-nanopb ./nexusMsg.proto --nanopb_out=.
